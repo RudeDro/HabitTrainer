@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context="com.rudiworks.habittrainer.CreateHabitActivity">
+
+    <EditText
+        android:id="@+id/et_title"
+        android:hint="@string/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_description"
+        android:hint="@string/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="2"/>
+
+    <Button
+        android:id="@+id/btn_choose_image"
+        android:text="@string/choose_image"
+        android:onClick="chooseImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/iv_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="storeHabit"
+        android:text="@string/add_habit"/>
+
+    <TextView
+        android:id="@+id/tv_errors"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorErrorText"/>
+
+</LinearLayout>
